@@ -1,576 +1,1027 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Pacific - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <title>Pacific - Free Bootstrap 4 Template by Colorlib</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/animate.css" />
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
 
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div id="header"></div>
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+  <link rel="stylesheet" href="css/jquery.timepicker.css" />
 
-    <section
-      class="hero-wrap hero-wrap-2 js-fullheight"
-      style="background-image: url(&quot;images/bg_1.jpg&quot;)"
-    >
-      <div class="overlay"></div>
-      <div class="container">
-        <div
-          class="row no-gutters slider-text js-fullheight align-items-end justify-content-center"
-        >
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <p class="breadcrumbs">
-              <span class="mr-2"
-                ><a href="index.html"
-                  >Home <i class="fa fa-chevron-right"></i></a
-              ></span>
-              <span>Tour List <i class="fa fa-chevron-right"></i></span>
-            </p>
-            <h1 class="mb-0 bread">Tours List</h1>
-          </div>
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Favicon / Site Icon -->
+  <link rel="icon" href="/images/logos.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/logos.png">
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(images/destination.png)">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+        <div class="col-md-9 ftco-animate pb-5 text-center">
+          <p class="breadcrumbs">
+            <span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span>
+            <span>Tour List <i class="fa fa-chevron-right"></i></span>
+          </p>
+          <h1 class="mb-0 bread">Tours List</h1>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="ftco-section ftco-no-pb">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="search-wrap-1 ftco-animate">
-              <form action="#" class="search-property-1">
-                <div class="row no-gutters">
-                  <div class="col-lg d-flex">
-                    <div class="form-group p-4 border-0">
-                      <label for="#">Destination</label>
-                      <div class="form-field">
+  <!-- <section class="ftco-section ftco-no-pb">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="search-wrap-1 ftco-animate">
+            <form action="#" class="search-property-1">
+              <div class="row no-gutters">
+                <div class="col-lg d-flex">
+                  <div class="form-group p-4 border-0">
+                    <label for="#">Destination</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <span class="fa fa-search"></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Search place" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg d-flex">
+                  <div class="form-group p-4">
+                    <label for="#">Check-in date</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <span class="fa fa-calendar"></span>
+                      </div>
+                      <input type="text" class="form-control checkin_date" placeholder="Check In Date" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg d-flex">
+                  <div class="form-group p-4">
+                    <label for="#">Check-out date</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <span class="fa fa-calendar"></span>
+                      </div>
+                      <input type="text" class="form-control checkout_date" placeholder="Check Out Date" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg d-flex">
+                  <div class="form-group p-4">
+                    <label for="#">Price Limit</label>
+                    <div class="form-field">
+                      <div class="select-wrap">
                         <div class="icon">
-                          <span class="fa fa-search"></span>
+                          <span class="fa fa-chevron-down"></span>
                         </div>
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Search place"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg d-flex">
-                    <div class="form-group p-4">
-                      <label for="#">Check-in date</label>
-                      <div class="form-field">
-                        <div class="icon">
-                          <span class="fa fa-calendar"></span>
-                        </div>
-                        <input
-                          type="text"
-                          class="form-control checkin_date"
-                          placeholder="Check In Date"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg d-flex">
-                    <div class="form-group p-4">
-                      <label for="#">Check-out date</label>
-                      <div class="form-field">
-                        <div class="icon">
-                          <span class="fa fa-calendar"></span>
-                        </div>
-                        <input
-                          type="text"
-                          class="form-control checkout_date"
-                          placeholder="Check Out Date"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg d-flex">
-                    <div class="form-group p-4">
-                      <label for="#">Price Limit</label>
-                      <div class="form-field">
-                        <div class="select-wrap">
-                          <div class="icon">
-                            <span class="fa fa-chevron-down"></span>
-                          </div>
-                          <select name="" id="" class="form-control">
-                            <option value="">$5,000</option>
-                            <option value="">$10,000</option>
-                            <option value="">$50,000</option>
-                            <option value="">$100,000</option>
-                            <option value="">$200,000</option>
-                            <option value="">$300,000</option>
-                            <option value="">$400,000</option>
-                            <option value="">$500,000</option>
-                            <option value="">$600,000</option>
-                            <option value="">$700,000</option>
-                            <option value="">$800,000</option>
-                            <option value="">$900,000</option>
-                            <option value="">$1,000,000</option>
-                            <option value="">$2,000,000</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg d-flex">
-                    <div class="form-group d-flex w-100 border-0">
-                      <div class="form-field w-100 align-items-center d-flex">
-                        <input
-                          type="submit"
-                          value="Search"
-                          class="align-self-stretch form-control btn btn-primary"
-                        />
+                        <select name="" id="" class="form-control">
+                          <option value="">$5,000</option>
+                          <option value="">$10,000</option>
+                          <option value="">$50,000</option>
+                          <option value="">$100,000</option>
+                          <option value="">$200,000</option>
+                          <option value="">$300,000</option>
+                          <option value="">$400,000</option>
+                          <option value="">$500,000</option>
+                          <option value="">$600,000</option>
+                          <option value="">$700,000</option>
+                          <option value="">$800,000</option>
+                          <option value="">$900,000</option>
+                          <option value="">$1,000,000</option>
+                          <option value="">$2,000,000</option>
+                        </select>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
+                <div class="col-lg d-flex">
+                  <div class="form-group d-flex w-100 border-0">
+                    <div class="form-field w-100 align-items-center d-flex">
+                      <input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/destination-1.jpg)"
-              >
-                <span class="price">$550/person</span>
-              </a>
-              <div class="text p-4">
-                <span class="days">8 Days Tour</span>
-                <h3><a href="#">Banaue Rice Terraces</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Banaue, Ifugao,
-                  Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-mountains"></span>Near Mountain</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/destination-2.jpg)"
-              >
-                <span class="price">$550/person</span>
-              </a>
-              <div class="text p-4">
-                <span class="days">10 Days Tour</span>
-                <h3><a href="#">Banaue Rice Terraces</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Banaue, Ifugao,
-                  Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/destination-3.jpg)"
-              >
-                <span class="price">$550/person</span>
-              </a>
-              <div class="text p-4">
-                <span class="days">7 Days Tour</span>
-                <h3><a href="#">Banaue Rice Terraces</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Banaue, Ifugao,
-                  Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/destination-4.jpg)"
-              >
-                <span class="price">$550/person</span>
-              </a>
-              <div class="text p-4">
-                <span class="days">8 Days Tour</span>
-                <h3><a href="#">Banaue Rice Terraces</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Banaue, Ifugao,
-                  Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/destination-5.jpg)"
-              >
-                <span class="price">$550/person</span>
-              </a>
-              <div class="text p-4">
-                <span class="days">10 Days Tour</span>
-                <h3><a href="#">Banaue Rice Terraces</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Banaue, Ifugao,
-                  Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/destination-6.jpg)"
-              >
-                <span class="price">$550/person</span>
-              </a>
-              <div class="text p-4">
-                <span class="days">7 Days Tour</span>
-                <h3><a href="#">Banaue Rice Terraces</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Banaue, Ifugao,
-                  Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/destination-7.jpg)"
-              >
-                <span class="price">$550/person</span>
-              </a>
-              <div class="text p-4">
-                <span class="days">7 Days Tour</span>
-                <h3><a href="#">Banaue Rice Terraces</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Banaue, Ifugao,
-                  Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/destination-8.jpg)"
-              >
-                <span class="price">$550/person</span>
-              </a>
-              <div class="text p-4">
-                <span class="days">7 Days Tour</span>
-                <h3><a href="#">Banaue Rice Terraces</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Banaue, Ifugao,
-                  Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/destination-9.jpg)"
-              >
-                <span class="price">$550/person</span>
-              </a>
-              <div class="text p-4">
-                <span class="days">7 Days Tour</span>
-                <h3><a href="#">Banaue Rice Terraces</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Banaue, Ifugao,
-                  Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap">
+            <a href="#" class="img" style="background-image: url(images/destination-1.jpg)">
+              <span class="price">$550/person</span>
+            </a>
+            <div class="text p-4">
+              <span class="days">8 Days Tour</span>
+              <h3><a href="#">Banaue Rice Terraces</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Banaue, Ifugao,
+                Philippines
+              </p>
               <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
+                <li><span class="flaticon-shower"></span>2</li>
+                <li><span class="flaticon-king-size"></span>3</li>
+                <li><span class="flaticon-mountains"></span>Near Mountain</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap">
+            <a href="#" class="img" style="background-image: url(images/destination-2.jpg)">
+              <span class="price">$550/person</span>
+            </a>
+            <div class="text p-4">
+              <span class="days">10 Days Tour</span>
+              <h3><a href="#">Banaue Rice Terraces</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Banaue, Ifugao,
+                Philippines
+              </p>
+              <ul>
+                <li><span class="flaticon-shower"></span>2</li>
+                <li><span class="flaticon-king-size"></span>3</li>
+                <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap">
+            <a href="#" class="img" style="background-image: url(images/destination-3.jpg)">
+              <span class="price">$550/person</span>
+            </a>
+            <div class="text p-4">
+              <span class="days">7 Days Tour</span>
+              <h3><a href="#">Banaue Rice Terraces</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Banaue, Ifugao,
+                Philippines
+              </p>
+              <ul>
+                <li><span class="flaticon-shower"></span>2</li>
+                <li><span class="flaticon-king-size"></span>3</li>
+                <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap">
+            <a href="#" class="img" style="background-image: url(images/destination-4.jpg)">
+              <span class="price">$550/person</span>
+            </a>
+            <div class="text p-4">
+              <span class="days">8 Days Tour</span>
+              <h3><a href="#">Banaue Rice Terraces</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Banaue, Ifugao,
+                Philippines
+              </p>
+              <ul>
+                <li><span class="flaticon-shower"></span>2</li>
+                <li><span class="flaticon-king-size"></span>3</li>
+                <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap">
+            <a href="#" class="img" style="background-image: url(images/destination-5.jpg)">
+              <span class="price">$550/person</span>
+            </a>
+            <div class="text p-4">
+              <span class="days">10 Days Tour</span>
+              <h3><a href="#">Banaue Rice Terraces</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Banaue, Ifugao,
+                Philippines
+              </p>
+              <ul>
+                <li><span class="flaticon-shower"></span>2</li>
+                <li><span class="flaticon-king-size"></span>3</li>
+                <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap">
+            <a href="#" class="img" style="background-image: url(images/destination-6.jpg)">
+              <span class="price">$550/person</span>
+            </a>
+            <div class="text p-4">
+              <span class="days">7 Days Tour</span>
+              <h3><a href="#">Banaue Rice Terraces</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Banaue, Ifugao,
+                Philippines
+              </p>
+              <ul>
+                <li><span class="flaticon-shower"></span>2</li>
+                <li><span class="flaticon-king-size"></span>3</li>
+                <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap">
+            <a href="#" class="img" style="background-image: url(images/destination-7.jpg)">
+              <span class="price">$550/person</span>
+            </a>
+            <div class="text p-4">
+              <span class="days">7 Days Tour</span>
+              <h3><a href="#">Banaue Rice Terraces</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Banaue, Ifugao,
+                Philippines
+              </p>
+              <ul>
+                <li><span class="flaticon-shower"></span>2</li>
+                <li><span class="flaticon-king-size"></span>3</li>
+                <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap">
+            <a href="#" class="img" style="background-image: url(images/destination-8.jpg)">
+              <span class="price">$550/person</span>
+            </a>
+            <div class="text p-4">
+              <span class="days">7 Days Tour</span>
+              <h3><a href="#">Banaue Rice Terraces</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Banaue, Ifugao,
+                Philippines
+              </p>
+              <ul>
+                <li><span class="flaticon-shower"></span>2</li>
+                <li><span class="flaticon-king-size"></span>3</li>
+                <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap">
+            <a href="#" class="img" style="background-image: url(images/destination-9.jpg)">
+              <span class="price">$550/person</span>
+            </a>
+            <div class="text p-4">
+              <span class="days">7 Days Tour</span>
+              <h3><a href="#">Banaue Rice Terraces</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Banaue, Ifugao,
+                Philippines
+              </p>
+              <ul>
+                <li><span class="flaticon-shower"></span>2</li>
+                <li><span class="flaticon-king-size"></span>3</li>
+                <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="ftco-intro ftco-section ftco-no-pt">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 text-center">
-            <div class="img" style="background-image: url(images/bg_2.jpg)">
-              <div class="overlay"></div>
-              <h2>We Are Pacific A Travel Agency</h2>
-              <p>
-                We can manage your dream building A small river named Duden
-                flows by their place
-              </p>
-              <p class="mb-0">
-                <a href="#" class="btn btn-primary px-4 py-3"
-                  >Ask For A Quote</a
-                >
-              </p>
-            </div>
+      <div class="row mt-5">
+        <div class="col text-center">
+          <div class="block-27">
+            <ul>
+              <li><a href="#">&lt;</a></li>
+              <li class="active"><span>1</span></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&gt;</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer
-      class="ftco-footer bg-bottom ftco-no-pt"
-      style="background-image: url(images/bg_3.jpg)"
-    >
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md pt-5">
-            <div class="ftco-footer-widget pt-md-5 mb-4">
-              <h2 class="ftco-heading-2">About</h2>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <ul
-                class="ftco-footer-social list-unstyled float-md-left float-lft"
-              >
-                <li class="ftco-animate">
-                  <a href="#"><span class="fa fa-twitter"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="fa fa-facebook"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="fa fa-instagram"></span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md pt-5 border-left">
-            <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Infromation</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
-                <li><a href="#" class="py-2 d-block">General Enquiries</a></li>
-                <li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
-                <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
-                <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-                <li><a href="#" class="py-2 d-block">Call Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md pt-5 border-left">
-            <div class="ftco-footer-widget pt-md-5 mb-4">
-              <h2 class="ftco-heading-2">Experience</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Adventure</a></li>
-                <li>
-                  <a href="#" class="py-2 d-block">Hotel and Restaurant</a>
-                </li>
-                <li><a href="#" class="py-2 d-block">Beach</a></li>
-                <li><a href="#" class="py-2 d-block">Nature</a></li>
-                <li><a href="#" class="py-2 d-block">Camping</a></li>
-                <li><a href="#" class="py-2 d-block">Party</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md pt-5 border-left">
-            <div class="ftco-footer-widget pt-md-5 mb-4">
-              <h2 class="ftco-heading-2">Have a Questions?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li>
-                    <span class="icon fa fa-map-marker"></span
-                    ><span class="text"
-                      >203 Fake St. Mountain View, San Francisco, California,
-                      USA</span
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon fa fa-phone"></span
-                      ><span class="text">+2 392 3929 210</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon fa fa-paper-plane"></span
-                      ><span class="text">info@yourdomain.com</span></a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+  <section class="ftco-intro ftco-section ftco-no-pt">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <div class="img" style="background-image: url(images/bg_2.jpg)">
+            <div class="overlay"></div>
+            <h2>We Are Pacific A Travel Agency</h2>
             <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | This template is made with
-              <i class="fa fa-heart" aria-hidden="true"></i> by
-              <a href="https://colorlib.com" target="_blank">Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              We can manage your dream building A small river named Duden
+              flows by their place
+            </p>
+            <p class="mb-0">
+              <a href="#" class="btn btn-primary px-4 py-3">Ask For A Quote</a>
             </p>
           </div>
         </div>
       </div>
-    </footer>
-
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
     </div>
+  </section> -->
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+  <section class="destinations">
+    <div class="container">
+      <h2 class="section-title">Kerala Destinations Grid</h2>
+      <p class="section-subtitle">Explore the most beautiful places in God's Own Country</p>
 
-    <script>
-      fetch("Layout/Header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-        })
-        .catch((error) => console.log("Header load error:", error));
-    </script>
-  </body>
+      <div class="grid">
+
+        <div class="card">
+          <img src="/images/munnar.jpg" alt="Munnar">
+          <div class="card-content">
+            <h3 class="text-light">Munnar</h3>
+            <p>Tea gardens, cool climate & scenic hills.</p>
+            <button>Explore</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/alleppey.jpg" alt="Alleppey">
+          <div class="card-content">
+            <h3 class="text-light">Alleppey</h3>
+            <p>Famous backwaters & luxury houseboats.</p>
+            <button>Explore</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/images/kovalam.jpg" alt="Kovalam">
+          <div class="card-content">
+            <h3 class="text-light">Kovalam</h3>
+            <p>Beautiful beaches & sunset views.</p>
+            <button>Explore</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <style>
+    .destinations {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #F15D30;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+    }
+
+    .card button {
+      background: #F15D30;
+      border: none;
+      padding: 8px 18px;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+
+  <section class="why-kerala">
+    <div class="container">
+      <h2 class="section-title">Why Choose Kerala for Your Next Vacation</h2>
+      <p class="section-subtitle">
+        Experience nature, adventure, relaxation, and culture – all in one unforgettable destination.
+      </p>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <div class="icons">🚤</div>
+          <h3>Mesmerizing Backwaters</h3>
+          <p>
+            Cruise through the serene backwaters of Alleppey in a traditional houseboat and
+            enjoy peaceful views of coconut palms and village life.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="icons">🌄</div>
+          <h3>Scenic Hill Stations</h3>
+          <p>
+            Escape to the cool climate of Munnar and Wayanad, surrounded by
+            lush green tea plantations and breathtaking mountain landscapes.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="icons">🏝️</div>
+          <h3>Stunning Beaches</h3>
+          <p>
+            Relax at Kovalam and Varkala beaches, known for golden sands,
+            lighthouse views, and spectacular Arabian Sea sunsets.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <style>
+    .why-kerala {
+      padding: 80px 0;
+      background: #f9f9f9;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #F15D30;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .why-card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .why-card:hover {
+      border-color: #F15D30;
+      transform: translateY(-8px);
+    }
+
+    .icons {
+      font-size: 40px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <section class="travel-tips">
+    <div class="container">
+      <h2 class="section-title">Essential Kerala Travel Tips</h2>
+      <p class="section-subtitle">
+        Plan smart and enjoy a safe, comfortable, and unforgettable experience in God’s Own Country.
+      </p>
+
+      <div class="tips-grid">
+
+        <div class="tip-card">
+          <div class="tip-icon">🧳</div>
+          <h3>Tropical Packing</h3>
+          <p>
+            Carry light cotton clothes, sunscreen, and comfortable shoes for Kerala’s warm climate.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">🌤️</div>
+          <h3>Best Season</h3>
+          <p>
+            Visit from October to March for pleasant weather and perfect sightseeing.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">🏨</div>
+          <h3>Advance Booking</h3>
+          <p>
+            Book hotels and houseboats early to get the best deals during peak season.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">🙏</div>
+          <h3>Local Etiquette</h3>
+          <p>
+            Dress modestly at temples and respect Kerala’s culture and traditions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <style>
+    .travel-tips {
+      padding: 80px 0;
+      background: #f9f9f9;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #F15D30;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .tip-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+      border-top: 4px solid transparent;
+    }
+
+    .tip-card:hover {
+      border-top: 4px solid #F15D30;
+      transform: translateY(-8px);
+    }
+
+    .tip-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #F15D30;
+    }
+
+    .tip-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .tip-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <section class="ftco-section testimony-section bg-bottom" style="background-image: url(images/bg_1.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center pb-4">
+        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          <span class="subheading">Testimonial</span>
+          <h2 class="mb-4">Tourist Feedback</h2>
+        </div>
+      </div>
+      <div class="row ftco-animate">
+        <div class="col-md-12">
+          <div class="carousel-testimony owl-carousel">
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">The wildlife safari in Thekkady was a lifetime memory.`</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">The houseboat experience in Alleppey was unforgettable.</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">Excellent hotels and professional service throughout the trip</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">Munnar was breathtaking and perfectly organized.</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">Great support team and amazing itinerary planning.</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">About</h2>
+            <p>Discover Kerala with customized tours, serene backwaters, scenic hills, and relaxing beach
+              experiences.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+              <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Travel Information</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Plan Your Trip</a></li>
+              <li><a href="#" class="py-2 d-block">Travel Support</a></li>
+              <li><a href="#" class="py-2 d-block">Tour Terms & Conditions</a></li>
+              <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+              <li><a href="#" class="py-2 d-block">Cancellation & Refund Policy</a></li>
+              <li><a href="#" class="py-2 d-block">Call Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Kerala Experiences</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Adventure Tours</a></li>
+              <li><a href="#" class="py-2 d-block">Hotels & Dining</a></li>
+              <li><a href="#" class="py-2 d-block">Beach Holidays</a></li>
+              <li><a href="#" class="py-2 d-block">Nature Escapes</a></li>
+              <li><a href="#" class="py-2 d-block">Eco Camping</a></li>
+              <li><a href="#" class="py-2 d-block">Nightlife & Events</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Location</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon fa fa-map-marker"></span><span class="text">VIP FUNCTION HALL Main
+                    Aurangabad</span></li>
+                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 4252823909</span></a></li>
+                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span
+                      class="text">info@karelaholidays11.com</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+            is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+              target="_blank">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg>
+  </div>
+
+  <a href="https://wa.me/919999999999?text=Hi%20I%20want%20details%20about%20Kerala%20Hotels" class="whatsapp-float"
+    target="_blank">
+    <i class="icon fa fa-whatsapp"></i>
+  </a>
+
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      left: 25px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 28px;
+      line-height: 60px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 1000;
+      transition: 0.3s;
+
+      /* 👇 Animation Added */
+      animation: float 3s ease-in-out infinite, pulse 2s infinite;
+    }
+
+    /* Hover Effect */
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* Floating Up-Down Effect */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    /* Pulse Glow Effect */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- <script>
+    fetch("Layout/Header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch((error) => console.log("Header load error:", error));
+  </script> -->
+  <script>
+    fetch("Layout/Header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // Get current page filename
+        let currentPage = window.location.pathname.split("/").pop();
+
+        // If on root, set it to index.html
+        if (currentPage === "") {
+          currentPage = "index.html";
+        }
+
+        // Select all nav links
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(link => {
+          const linkPage = link.getAttribute("href");
+
+          // Add 'active' to parent <li> if href matches current page
+          if (linkPage === currentPage) {
+            link.parentElement.classList.add("active");
+          } else {
+            link.parentElement.classList.remove("active");
+          }
+        });
+      });
+  </script>
+</body>
+
 </html>

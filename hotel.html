@@ -1,630 +1,1298 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Pacific - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <title>Pacific - Free Bootstrap 4 Template by Colorlib</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/animate.css" />
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
 
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div id="header"></div>
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+  <link rel="stylesheet" href="css/jquery.timepicker.css" />
 
-    <section
-      class="hero-wrap hero-wrap-2 js-fullheight"
-      style="background-image: url(&quot;images/bg_1.jpg&quot;)"
-    >
-      <div class="overlay"></div>
-      <div class="container">
-        <div
-          class="row no-gutters slider-text js-fullheight align-items-end justify-content-center"
-        >
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <p class="breadcrumbs">
-              <span class="mr-2"
-                ><a href="index.html"
-                  >Home <i class="fa fa-chevron-right"></i></a
-              ></span>
-              <span>Hotel <i class="fa fa-chevron-right"></i></span>
-            </p>
-            <h1 class="mb-0 bread">Hotel</h1>
-          </div>
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Favicon / Site Icon -->
+  <link rel="icon" href="/images/logos.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/logos.png">
+  <style>
+    .faq-section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .faq-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .faq-title h2 {
+      font-size: 32px;
+      color: #F15D30;
+      margin-bottom: 10px;
+    }
+
+    .faq-item {
+      background: #fff;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .faq-question {
+      padding: 18px 20px;
+      background: #ffffff;
+      color: #333;
+      cursor: pointer;
+      position: relative;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 22px;
+      transition: all 0.3s ease;
+      color: #F15D30;
+    }
+
+    /* Hover effect */
+    .faq-question:hover {
+      background: #f8f8f8;
+    }
+
+    /* ACTIVE STATE */
+    .faq-item.active .faq-question {
+      background: #F15D30;
+      color: #fff;
+    }
+
+    .faq-item.active .faq-question::after {
+      content: '-';
+      color: #fff;
+    }
+
+    .faq-item.active .faq-question:hover {
+      background: #F15D30;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      background: #fff;
+      transition: max-height 0.4s ease-out;
+      /* Remove fixed padding from here */
+    }
+
+    .faq-item.active .faq-answer {
+      /* Remove max-height: 300px from here - will be set by JS */
+      padding: 0;
+      /* Reset padding */
+    }
+
+    .answer-content {
+      padding: 0 20px 20px 20px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .faq-section {
+        padding: 40px 15px;
+      }
+
+      .faq-title h2 {
+        font-size: 28px;
+      }
+
+      .faq-question {
+        padding: 15px 45px 15px 15px;
+        font-size: 15px;
+      }
+
+      .faq-question::after {
+        right: 15px;
+        font-size: 20px;
+      }
+
+      .answer-content {
+        padding: 0 15px 15px 15px;
+        font-size: 14px;
+      }
+    }
+
+    /* Optional: Add animation for plus/minus */
+    .faq-question::after {
+      transform: rotate(0deg);
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: rotate(0deg);
+    }
+
+    /* Fade-in effect for answers */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .faq-item.active .answer-content {
+      animation: fadeIn 0.4s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(images/hotel.jpg)">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+        <div class="col-md-9 ftco-animate pb-5 text-center">
+          <p class="breadcrumbs">
+            <span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span>
+            <span>Hotel <i class="fa fa-chevron-right"></i></span>
+          </p>
+          <h1 class="mb-0 bread">Hotel</h1>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="ftco-section ftco-no-pb">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="search-wrap-1 ftco-animate">
-              <form action="#" class="search-property-1">
-                <div class="row no-gutters">
-                  <div class="col-lg d-flex">
-                    <div class="form-group p-4 border-0">
-                      <label for="#">Destination</label>
-                      <div class="form-field">
+  <!-- <section class="ftco-section ftco-no-pb">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="search-wrap-1 ftco-animate">
+            <form action="#" class="search-property-1">
+              <div class="row no-gutters">
+                <div class="col-lg d-flex">
+                  <div class="form-group p-4 border-0">
+                    <label for="#">Destination</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <span class="fa fa-search"></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Search place" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg d-flex">
+                  <div class="form-group p-4">
+                    <label for="#">Check-in date</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <span class="fa fa-calendar"></span>
+                      </div>
+                      <input type="text" class="form-control checkin_date" placeholder="Check In Date" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg d-flex">
+                  <div class="form-group p-4">
+                    <label for="#">Check-out date</label>
+                    <div class="form-field">
+                      <div class="icon">
+                        <span class="fa fa-calendar"></span>
+                      </div>
+                      <input type="text" class="form-control checkout_date" placeholder="Check Out Date" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg d-flex">
+                  <div class="form-group p-4">
+                    <label for="#">Price Limit</label>
+                    <div class="form-field">
+                      <div class="select-wrap">
                         <div class="icon">
-                          <span class="fa fa-search"></span>
+                          <span class="fa fa-chevron-down"></span>
                         </div>
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Search place"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg d-flex">
-                    <div class="form-group p-4">
-                      <label for="#">Check-in date</label>
-                      <div class="form-field">
-                        <div class="icon">
-                          <span class="fa fa-calendar"></span>
-                        </div>
-                        <input
-                          type="text"
-                          class="form-control checkin_date"
-                          placeholder="Check In Date"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg d-flex">
-                    <div class="form-group p-4">
-                      <label for="#">Check-out date</label>
-                      <div class="form-field">
-                        <div class="icon">
-                          <span class="fa fa-calendar"></span>
-                        </div>
-                        <input
-                          type="text"
-                          class="form-control checkout_date"
-                          placeholder="Check Out Date"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg d-flex">
-                    <div class="form-group p-4">
-                      <label for="#">Price Limit</label>
-                      <div class="form-field">
-                        <div class="select-wrap">
-                          <div class="icon">
-                            <span class="fa fa-chevron-down"></span>
-                          </div>
-                          <select name="" id="" class="form-control">
-                            <option value="">$5,000</option>
-                            <option value="">$10,000</option>
-                            <option value="">$50,000</option>
-                            <option value="">$100,000</option>
-                            <option value="">$200,000</option>
-                            <option value="">$300,000</option>
-                            <option value="">$400,000</option>
-                            <option value="">$500,000</option>
-                            <option value="">$600,000</option>
-                            <option value="">$700,000</option>
-                            <option value="">$800,000</option>
-                            <option value="">$900,000</option>
-                            <option value="">$1,000,000</option>
-                            <option value="">$2,000,000</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg d-flex">
-                    <div class="form-group d-flex w-100 border-0">
-                      <div class="form-field w-100 align-items-center d-flex">
-                        <input
-                          type="submit"
-                          value="Search"
-                          class="align-self-stretch form-control btn btn-primary"
-                        />
+                        <select name="" id="" class="form-control">
+                          <option value="">$5,000</option>
+                          <option value="">$10,000</option>
+                          <option value="">$50,000</option>
+                          <option value="">$100,000</option>
+                          <option value="">$200,000</option>
+                          <option value="">$300,000</option>
+                          <option value="">$400,000</option>
+                          <option value="">$500,000</option>
+                          <option value="">$600,000</option>
+                          <option value="">$700,000</option>
+                          <option value="">$800,000</option>
+                          <option value="">$900,000</option>
+                          <option value="">$1,000,000</option>
+                          <option value="">$2,000,000</option>
+                        </select>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form>
-            </div>
+                <div class="col-lg d-flex">
+                  <div class="form-group d-flex w-100 border-0">
+                    <div class="form-field w-100 align-items-center d-flex">
+                      <input type="submit" value="Search" class="align-self-stretch form-control btn btn-primary" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section> -->
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/hotel-resto-1.jpg)"
-              >
-                <span class="price">$200/person</span>
-              </a>
-              <div class="text p-4">
-                <p class="star mb-2">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <span class="days">8 Days Tour</span>
-                <h3><a href="#">Manila Hotel</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Manila, Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-mountains"></span>Near Mountain</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/hotel-resto-2.jpg)"
-              >
-                <span class="price">$200/person</span>
-              </a>
-              <div class="text p-4">
-                <p class="star mb-2">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <span class="days">10 Days Tour</span>
-                <h3><a href="#">Manila Hotel</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Manila, Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/hotel-resto-3.jpg)"
-              >
-                <span class="price">$200/person</span>
-              </a>
-              <div class="text p-4">
-                <p class="star mb-2">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <span class="days">7 Days Tour</span>
-                <h3><a href="#">Manila Hotel</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Manila, Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <section class="hotel-categories">
+    <div class="container">
+      <h2 class="section-title">Hotel Categories</h2>
+      <p class="section-subtitle">
+        Choose the perfect stay for your Kerala holiday experience
+      </p>
 
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/hotel-resto-4.jpg)"
-              >
-                <span class="price">$200/person</span>
-              </a>
-              <div class="text p-4">
-                <p class="star mb-2">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <span class="days">8 Days Tour</span>
-                <h3><a href="#">Manila Hotel</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Manila, Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/hotel-resto-5.jpg)"
-              >
-                <span class="price">$200/person</span>
-              </a>
-              <div class="text p-4">
-                <p class="star mb-2">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <span class="days">10 Days Tour</span>
-                <h3><a href="#">Manila Hotel</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Manila, Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/hotel-resto-6.jpg)"
-              >
-                <span class="price">$200/person</span>
-              </a>
-              <div class="text p-4">
-                <p class="star mb-2">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <span class="days">7 Days Tour</span>
-                <h3><a href="#">Manila Hotel</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Manila, Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/hotel-resto-7.jpg)"
-              >
-                <span class="price">$200/person</span>
-              </a>
-              <div class="text p-4">
-                <p class="star mb-2">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <span class="days">7 Days Tour</span>
-                <h3><a href="#">Manila Hotel</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Manila, Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/hotel-resto-8.jpg)"
-              >
-                <span class="price">$200/person</span>
-              </a>
-              <div class="text p-4">
-                <p class="star mb-2">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <span class="days">7 Days Tour</span>
-                <h3><a href="#">Manila Hotel</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Manila, Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="project-wrap hotel">
-              <a
-                href="#"
-                class="img"
-                style="background-image: url(images/hotel-resto-9.jpg)"
-              >
-                <span class="price">$200/night</span>
-              </a>
-              <div class="text p-4">
-                <p class="star mb-2">
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
-                </p>
-                <span class="days">3 Days Tour</span>
-                <h3><a href="#">Manila Hotel</a></h3>
-                <p class="location">
-                  <span class="fa fa-map-marker"></span> Manila, Philippines
-                </p>
-                <ul>
-                  <li><span class="flaticon-shower"></span>2</li>
-                  <li><span class="flaticon-king-size"></span>3</li>
-                  <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
-                </ul>
-              </div>
-            </div>
+      <div class="hotel-grid">
+
+        <div class="hotel-card">
+          <img src="/images/Taj.jpg" alt="Taj Bekal Resort & Spa, Kerala">
+          <div class="hotel-content">
+            <h3 class="text-light">Taj Bekal Resort & Spa, Kerala</h3>
+            <button>View Hotels</button>
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
-            </div>
+
+        <div class="hotel-card">
+          <img src="/images/BlanketHotel.avif" alt="Blanket Hotel & Spa | Luxury 5 Star Resorts in Munnar">
+          <div class="hotel-content">
+            <h3 class="text-light">Blanket Hotel & Spa | Luxury 5 Star Resorts in Munnar</h3>
+            <button>View Hotels</button>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <img src="images/Eden Woods.jpg">
+          <div class="hotel-content">
+            <h3 class="text-light">Eden Woods Resorts & Spa</h3>
+            <button>View Hotels</button>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <img src="/images/Port Muziris.avif" alt="Port Muziris, a Tribute Portfolio Hotel, Kochi">
+          <div class="hotel-content">
+            <h3 class="text-light">Port Muziris, a Tribute Portfolio Hotel, Kochi</h3>
+            <button>View Hotels</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <style>
+    .hotel-categories {
+      padding: 80px 0;
+      background: #f9f9f9;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #F15D30;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .hotel-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .hotel-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .hotel-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .hotel-content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+    }
+
+    .hotel-content h3 {
+      margin-bottom: 10px;
+    }
+
+    .hotel-content button {
+      background: #F15D30;
+      border: none;
+      padding: 8px 18px;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hotel-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hotel-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <section class="hotel-listings">
+    <div class="container">
+      <h2 class="section-title">Hotel Listings</h2>
+      <p class="section-subtitle">
+        Discover the best stays for your Kerala holiday
+      </p>
+
+      <!-- Hotel Card 1 -->
+      <div class="hotel-list-card">
+        <div class="hotel-image">
+          <img src="/images/LakeView.avif" alt="Lake View Resort">
+        </div>
+        <div class="hotel-info">
+          <h3>Lake View Resort - Munnar</h3>
+          <p class="location">📍 Munnar, Kerala</p>
+          <div class="rating">★★★★★</div>
+          <p class="description">
+            Enjoy breathtaking mountain views, luxury rooms, and premium hospitality.
+          </p>
+          <div class="price-book">
+            <span class="price">₹6,999 / night</span>
+            <button>Book Now</button>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="ftco-intro ftco-section ftco-no-pt">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 text-center">
-            <div class="img" style="background-image: url(images/bg_2.jpg)">
-              <div class="overlay"></div>
-              <h2>We Are Pacific A Travel Agency</h2>
-              <p>
-                We can manage your dream building A small river named Duden
-                flows by their place
+      <!-- Hotel Card 2 -->
+      <div class="hotel-list-card">
+        <div class="hotel-image">
+          <img src="/images/Alleppey.png" alt="Alleppey Houseboat">
+        </div>
+        <div class="hotel-info">
+          <h3>Luxury Houseboat - Alleppey</h3>
+          <p class="location">📍 Alleppey Backwaters</p>
+          <div class="rating">★★★★☆</div>
+          <p class="description">
+            Cruise through serene backwaters with private rooms and authentic cuisine.
+          </p>
+          <div class="price-book">
+            <span class="price">₹8,499 / night</span>
+            <button>Book Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <style>
+    .hotel-listings {
+      padding: 80px 0;
+      background: #f9f9f9;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #F15D30;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .hotel-list-card {
+      display: flex;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .hotel-list-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .hotel-image img {
+      width: 300px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hotel-info {
+      padding: 25px;
+      flex: 1;
+    }
+
+    .hotel-info h3 {
+      margin-bottom: 8px;
+    }
+
+    .location {
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    .rating {
+      color: #F15D30;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .price-book {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+      color: #F15D30;
+    }
+
+    .hotel-info button {
+      background: #F15D30;
+      border: none;
+      padding: 8px 18px;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hotel-list-card {
+        flex-direction: column;
+      }
+
+      .hotel-image img {
+        width: 100%;
+        height: 250px;
+      }
+    }
+  </style>
+
+  <section class="why-book">
+    <div class="container">
+      <h2 class="section-title">Why Book With Us</h2>
+      <p class="section-subtitle">
+        Experience hassle-free Kerala holidays with trusted travel experts
+      </p>
+
+      <div class="why-book-grid">
+
+        <div class="why-box">
+          <div class="icons">💰</div>
+          <h3>Best Price Guarantee</h3>
+          <p>We offer competitive pricing with no hidden charges.</p>
+        </div>
+
+        <div class="why-box">
+          <div class="icons">🏨</div>
+          <h3>Handpicked Hotels</h3>
+          <p>Carefully selected stays for comfort, quality and value.</p>
+        </div>
+
+        <div class="why-box">
+          <div class="icons">📞</div>
+          <h3>24/7 Support</h3>
+          <p>Our travel experts are available anytime to assist you.</p>
+        </div>
+
+        <div class="why-box">
+          <div class="icons">⭐</div>
+          <h3>Trusted by Travelers</h3>
+          <p>Thousands of happy customers choose us every year.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <style>
+    .why-book {
+      padding: 80px 0;
+      background: #f9f9f9;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #F15D30;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 50px;
+    }
+
+    .why-book-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .why-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+      border-top: 4px solid transparent;
+    }
+
+    .why-box:hover {
+      border-top: 4px solid #F15D30;
+      transform: translateY(-8px);
+    }
+
+    .icons {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #F15D30;
+    }
+
+    .why-box h3 {
+      margin-bottom: 10px;
+    }
+
+    .why-box p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .why-book-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .why-book-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <section class="ftco-section">
+    <h2 class="section-title mb-5">Popular Locations</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap hotel">
+            <a href="#" class="img" style="background-image: url(images/Kumarakom.jpg)">
+              <span class="price">$200/person</span>
+            </a>
+            <div class="text p-4">
+              <p class="star mb-2">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
               </p>
-              <p class="mb-0">
-                <a href="#" class="btn btn-primary px-4 py-3"
-                  >Ask For A Quote</a
-                >
+              <h3><a href="#">Kumarakom Lake Resort</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Kumarakom.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap hotel">
+            <a href="#" class="img" style="background-image: url(images/The\ Leela.avif)">
+              <span class="price">$200/person</span>
+            </a>
+            <div class="text p-4">
+              <p class="star mb-2">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <h3><a href="#">The Leela Kovalam, a Raviz Hotel</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Kovalam
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap hotel">
+            <a href="#" class="img" style="background-image: url(images/Taj.jpg)">
+              <span class="price">$200/person</span>
+            </a>
+            <div class="text p-4">
+              <p class="star mb-2">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <h3><a href="#">Taj Bekal Resort & Spa, Kerala</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Ernakulam
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap hotel">
+            <a href="#" class="img" style="background-image: url(images/Taj\ Wayanad.jpg)">
+              <span class="price">$200/person</span>
+            </a>
+            <div class="text p-4">
+              <p class="star mb-2">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <h3><a href="#">Taj Wayanad Resort & Spa Kerala</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Wayanad
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap hotel">
+            <a href="#" class="img" style="background-image: url(images/SpiceTreeMunnar.jpg)">
+              <span class="price">$200/person</span>
+            </a>
+            <div class="text p-4">
+              <p class="star mb-2">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <h3><a href="#">SpiceTree Munnar</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Munnar
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ftco-animate">
+          <div class="project-wrap hotel">
+            <a href="#" class="img" style="background-image: url(images/TheZuriKumarakom.jpg)">
+              <span class="price">$200/person</span>
+            </a>
+            <div class="text p-4">
+              <p class="star mb-2">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </p>
+              <h3><a href="#">The Zuri Kumarakom, Kerala Resort & Spa</a></h3>
+              <p class="location">
+                <span class="fa fa-map-marker"></span> Kumarakom
               </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer
-      class="ftco-footer bg-bottom ftco-no-pt"
-      style="background-image: url(images/bg_3.jpg)"
-    >
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md pt-5">
-            <div class="ftco-footer-widget pt-md-5 mb-4">
-              <h2 class="ftco-heading-2">About</h2>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <ul
-                class="ftco-footer-social list-unstyled float-md-left float-lft"
-              >
-                <li class="ftco-animate">
-                  <a href="#"><span class="fa fa-twitter"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="fa fa-facebook"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="fa fa-instagram"></span></a>
-                </li>
-              </ul>
+  <section class="ftco-section testimony-section bg-bottom" style="background-image: url(images/bg_1.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center pb-4">
+        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          <span class="subheading">Testimonial</span>
+          <h2 class="mb-4">Tourist Feedback</h2>
+        </div>
+      </div>
+      <div class="row ftco-animate">
+        <div class="col-md-12">
+          <div class="carousel-testimony owl-carousel">
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">The wildlife safari in Thekkady was a lifetime memory.`</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-md pt-5 border-left">
-            <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Infromation</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
-                <li><a href="#" class="py-2 d-block">General Enquiries</a></li>
-                <li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
-                <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
-                <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-                <li><a href="#" class="py-2 d-block">Call Us</a></li>
-              </ul>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">The houseboat experience in Alleppey was unforgettable.</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-md pt-5 border-left">
-            <div class="ftco-footer-widget pt-md-5 mb-4">
-              <h2 class="ftco-heading-2">Experience</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Adventure</a></li>
-                <li>
-                  <a href="#" class="py-2 d-block">Hotel and Restaurant</a>
-                </li>
-                <li><a href="#" class="py-2 d-block">Beach</a></li>
-                <li><a href="#" class="py-2 d-block">Nature</a></li>
-                <li><a href="#" class="py-2 d-block">Camping</a></li>
-                <li><a href="#" class="py-2 d-block">Party</a></li>
-              </ul>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">Excellent hotels and professional service throughout the trip</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-md pt-5 border-left">
-            <div class="ftco-footer-widget pt-md-5 mb-4">
-              <h2 class="ftco-heading-2">Have a Questions?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li>
-                    <span class="icon fa fa-map-marker"></span
-                    ><span class="text"
-                      >203 Fake St. Mountain View, San Francisco, California,
-                      USA</span
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon fa fa-phone"></span
-                      ><span class="text">+2 392 3929 210</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon fa fa-paper-plane"></span
-                      ><span class="text">info@yourdomain.com</span></a
-                    >
-                  </li>
-                </ul>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">Munnar was breathtaking and perfectly organized.</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </p>
+                  <p class="mb-4">Great support team and amazing itinerary planning.</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    <div class="pl-3">
+                      <p class="name">Roger Scott</p>
+                      <span class="position">Marketing Manager</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | This template is made with
-              <i class="fa fa-heart" aria-hidden="true"></i> by
-              <a href="https://colorlib.com" target="_blank">Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-        </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
+  <section class="faq-section">
+    <div class="faq-title">
+      <h2>Kerala Hotels & Resorts FAQs</h2>
+      <p>Everything you need to know about booking hotels and resorts in Kerala</p>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        What types of hotels are available in Kerala?
+      </div>
+      <div class="faq-answer">
+        <div class="answer-content">
+          Kerala offers a wide range of accommodations including luxury resorts, beachfront hotels, budget stays,
+          heritage homes, and premium houseboats in Alleppey and Kumarakom.
+        </div>
+      </div>
+    </div>
 
-    <script>
-      fetch("Layout/Header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-        })
-        .catch((error) => console.log("Header load error:", error));
-    </script>
-  </body>
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        Which are the best locations to book hotels in Kerala?
+      </div>
+      <div class="faq-answer">
+        <div class="answer-content">
+          Popular hotel destinations include Munnar for hill resorts, Alleppey for houseboats, Kovalam and Varkala for
+          beach resorts, and Thekkady for nature stays.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        Do Kerala resorts offer family-friendly facilities?
+      </div>
+      <div class="faq-answer">
+        <div class="answer-content">
+          Yes, most Kerala resorts provide family-friendly amenities such as swimming pools, spacious rooms, kids'
+          activities, and guided sightseeing options.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        Are houseboat stays included in hotel bookings?
+      </div>
+      <div class="faq-answer">
+        <div class="answer-content">
+          Houseboats are a unique accommodation option in Kerala. You can book deluxe or luxury houseboats with meals
+          and private backwater cruises.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        Can I customize my hotel or resort stay in Kerala?
+      </div>
+      <div class="faq-answer">
+        <div class="answer-content">
+          Yes, you can choose room categories, meal plans, and additional services like airport transfers, spa
+          treatments, and sightseeing tours.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        What is the best time to book hotels in Kerala?
+      </div>
+      <div class="faq-answer">
+        <div class="answer-content">
+          The best time to book hotels in Kerala is from October to March. For monsoon discounts and Ayurveda
+          treatments, June to September is ideal.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+        Do you offer airport pickup services?
+      </div>
+      <div class="faq-answer">
+        <div class="answer-content">
+          Yes, we provide airport pickup and drop services at major airports including Kochi, Trivandrum, and Calicut at
+          additional charges.
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url(images/bg_3.jpg);">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">About</h2>
+            <p>Discover Kerala with customized tours, serene backwaters, scenic hills, and relaxing beach
+              experiences.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+              <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Travel Information</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Plan Your Trip</a></li>
+              <li><a href="#" class="py-2 d-block">Travel Support</a></li>
+              <li><a href="#" class="py-2 d-block">Tour Terms & Conditions</a></li>
+              <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+              <li><a href="#" class="py-2 d-block">Cancellation & Refund Policy</a></li>
+              <li><a href="#" class="py-2 d-block">Call Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Kerala Experiences</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Adventure Tours</a></li>
+              <li><a href="#" class="py-2 d-block">Hotels & Dining</a></li>
+              <li><a href="#" class="py-2 d-block">Beach Holidays</a></li>
+              <li><a href="#" class="py-2 d-block">Nature Escapes</a></li>
+              <li><a href="#" class="py-2 d-block">Eco Camping</a></li>
+              <li><a href="#" class="py-2 d-block">Nightlife & Events</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5 border-left">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Location</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon fa fa-map-marker"></span><span class="text">VIP FUNCTION HALL Main
+                    Aurangabad</span></li>
+                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 4252823909</span></a></li>
+                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span
+                      class="text">info@karelaholidays11.com</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+            is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+              target="_blank">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg>
+  </div>
+
+  <a href="https://wa.me/9970538128?text=Hi%20I%20want%20details%20about%20Kerala%20Hotels" class="whatsapp-float"
+    target="_blank">
+    <i class="icon fa fa-whatsapp"></i>
+  </a>
+
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      left: 25px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 28px;
+      line-height: 60px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 1000;
+      transition: 0.3s;
+
+      /* 👇 Animation Added */
+      animation: float 3s ease-in-out infinite, pulse 2s infinite;
+    }
+
+    /* Hover Effect */
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    /* Floating Up-Down Effect */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    /* Pulse Glow Effect */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- <script>
+    fetch("Layout/Header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch((error) => console.log("Header load error:", error));
+  </script> -->
+
+  <script>
+    fetch("Layout/Header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // Get current page filename
+        let currentPage = window.location.pathname.split("/").pop();
+
+        // If on root, set it to index.html
+        if (currentPage === "") {
+          currentPage = "index.html";
+        }
+
+        // Select all nav links
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(link => {
+          const linkPage = link.getAttribute("href");
+
+          // Add 'active' to parent <li> if href matches current page
+          if (linkPage === currentPage) {
+            link.parentElement.classList.add("active");
+          } else {
+            link.parentElement.classList.remove("active");
+          }
+        });
+      });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all FAQ questions
+      const faqQuestions = document.querySelectorAll('.faq-question');
+
+      // Make sure all FAQs are closed initially
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        const answer = item.querySelector('.faq-answer');
+        if (answer) {
+          answer.style.maxHeight = null;
+        }
+      });
+
+      // Add click event to each question
+      faqQuestions.forEach((question) => {
+        question.addEventListener('click', function (e) {
+          const faqItem = this.parentElement;
+          const answer = faqItem.querySelector('.faq-answer');
+          const content = faqItem.querySelector('.answer-content');
+
+          // Check if this FAQ is already active
+          const isActive = faqItem.classList.contains('active');
+
+          // Close all FAQs first
+          document.querySelectorAll('.faq-item').forEach((item) => {
+            item.classList.remove('active');
+            const ans = item.querySelector('.faq-answer');
+            if (ans) {
+              ans.style.maxHeight = null;
+            }
+
+            // Update ARIA attribute
+            const q = item.querySelector('.faq-question');
+            if (q) {
+              q.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          // If it wasn't active, open it (toggle behavior)
+          if (!isActive) {
+            faqItem.classList.add('active');
+
+            // Update ARIA attribute
+            this.setAttribute('aria-expanded', 'true');
+
+            if (answer && content) {
+              // Calculate height including content padding
+              const contentHeight = content.offsetHeight;
+              answer.style.maxHeight = contentHeight + 'px';
+
+              // Optional: Add small delay for smooth animation
+              setTimeout(() => {
+                answer.style.maxHeight = contentHeight + 'px';
+              }, 10);
+            }
+          } else {
+            this.setAttribute('aria-expanded', 'false');
+          }
+
+          // Prevent event bubbling
+          e.stopPropagation();
+        });
+
+        // Add keyboard accessibility (Enter and Space keys)
+        question.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      });
+
+      // Handle window resize to adjust max-height for open FAQs
+      let resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          document.querySelectorAll('.faq-item.active').forEach(function (item) {
+            const answer = item.querySelector('.faq-answer');
+            const content = item.querySelector('.answer-content');
+            if (answer && content) {
+              answer.style.maxHeight = content.offsetHeight + 'px';
+            }
+          });
+        }, 250);
+      });
+    });
+  </script>
+</body>
+
 </html>
