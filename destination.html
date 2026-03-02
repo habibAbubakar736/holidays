@@ -57,6 +57,14 @@
     <!-- Favicon / Site Icon -->
     <link rel="icon" href="/images/logos.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logos.png">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
 
   <body>
@@ -72,7 +80,8 @@
             <p class="breadcrumbs">
               <span class="mr-2"><a href="index.html">Home <i
                     class="fa fa-chevron-right"></i></a></span>
-              <span>Kerala Destinations<i class="fa fa-chevron-right"></i></span>
+              <span>Kerala Destinations<i
+                  class="fa fa-chevron-right"></i></span>
             </p>
             <h1 class="mb-0 bread">Kerala Destinations</h1>
           </div>
@@ -392,38 +401,50 @@
         <p class="section-subtitle">Explore the most beautiful places in God's
           Own Country</p>
 
-        <div class="grid">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
 
-          <div class="card">
-            <img src="/images/munnar.jpg" alt="Munnar">
-            <div class="card-content">
-              <h3 class="text-light">Munnar</h3>
-              <p>Tea gardens, cool climate & scenic hills.</p>
-              <button>Explore</button>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="/images/munnar.jpg" alt="Munnar">
+                <div class="card-content">
+                  <h3 class="text-light">Munnar</h3>
+                  <p>Tea gardens, cool climate & scenic hills.</p>
+                  <button>Explore</button>
+                </div>
+              </div>
             </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="/images/alleppey.jpg" alt="Alleppey">
+                <div class="card-content">
+                  <h3 class="text-light">Alleppey</h3>
+                  <p>Famous backwaters & luxury houseboats.</p>
+                  <button>Explore</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="/images/kovalam.jpg" alt="Kovalam">
+                <div class="card-content">
+                  <h3 class="text-light">Kovalam</h3>
+                  <p>Beautiful beaches & sunset views.</p>
+                  <button>Explore</button>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <div class="card">
-            <img src="/images/alleppey.jpg" alt="Alleppey">
-            <div class="card-content">
-              <h3 class="text-light">Alleppey</h3>
-              <p>Famous backwaters & luxury houseboats.</p>
-              <button>Explore</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="/images/kovalam.jpg" alt="Kovalam">
-            <div class="card-content">
-              <h3 class="text-light">Kovalam</h3>
-              <p>Beautiful beaches & sunset views.</p>
-              <button>Explore</button>
-            </div>
-          </div>
-
+          <!-- Dots -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
+
     <style>
     .destinations {
       padding: 80px 0;
@@ -443,52 +464,54 @@
       display: block;
       margin: 10px auto;
     }
+.swiper {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-top: 50px;
-    }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
 
-    /* Responsive */
-    @media (max-width: 992px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+ .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  height: 350px;
+  width: 100%;
+  max-width: 350px;
+}
 
-    @media (max-width: 576px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
 
-    .card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
+.card:hover img {
+  transform: scale(1.1);
+}
 
-    .card img {
-      width: 100%;
-      height: 350px;
-      object-fit: cover;
-      transition: 0.4s;
-    }
+  .card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+}
 
-    .card:hover img {
-      transform: scale(1.1);
-    }
-
-    .card-content {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: white;
-    }
-
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+}
     .card button {
       background: #F15D30;
       border: none;
@@ -498,9 +521,24 @@
       cursor: pointer;
       margin-top: 10px;
     }
+    .section-subtitle {
+  text-align: center;
+  color: #777;
+}
+/* Default dot */
+.swiper-pagination-bullet {
+  background: #F15D30;
+  opacity: 0.5;
+}
+
+/* Active dot */
+.swiper-pagination-bullet-active {
+  background: #F15D30;
+  opacity: 1;
+}
   </style>
 
-    <section class="why-kerala">
+    <!-- <section class="why-kerala">
       <div class="container">
         <h2 class="section-title">Why Choose Kerala for Your Next Vacation</h2>
         <p class="section-subtitle">
@@ -540,8 +578,9 @@
 
         </div>
       </div>
-    </section>
-    <style>
+    </section> -->
+
+    <!-- <style>
     .why-kerala {
       padding: 80px 0;
       background: #f9f9f9;
@@ -616,9 +655,144 @@
         grid-template-columns: 1fr;
       }
     }
-  </style>
+  </style> -->
 
-    <section class="travel-tips">
+    <section class="why-kerala">
+      <div class="container">
+        <h2 class="section-title">Why Choose Kerala for Your Next Vacation</h2>
+        <p class="section-subtitle">
+          Experience nature, adventure, relaxation, and culture – all in one
+          unforgettable destination.
+        </p>
+
+        <div class="swiper whySwiper">
+          <div class="swiper-wrapper">
+
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="why-card">
+                <div class="icon-box">
+                  <i class="fa-solid fa-ship"></i>
+                </div>
+                <h3>Backwaters</h3>
+                <p>
+                  Enjoy a peaceful houseboat cruise through Kerala’s scenic
+                  backwaters.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+              <div class="why-card">
+                <div class="icon-box">
+                  <i class="fa-solid fa-mountain"></i>
+                </div>
+                <h3>Scenic Hill Stations</h3>
+                <p>
+                  Discover the cool climate and lush tea plantations of Munnar
+                  and Wayanad.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div class="why-card">
+                <div class="icon-box">
+                  <i class="fa-solid fa-umbrella-beach"></i>
+                </div>
+                <h3>Stunning Beaches</h3>
+                <p>
+                  Relax on golden beaches with breathtaking Arabian Sea sunsets.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #F15D30;
+  display: block;
+  margin: 10px auto;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 60px;
+}
+
+/* Card */
+.why-card {
+  background: #fff;
+  padding: 50px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(241, 93, 48, 0.15);
+}
+
+/* Icon */
+.icon-box {
+  width: 90px;
+  height: 90px;
+  background: rgba(241, 93, 48, 0.1);
+  border-radius: 50%;
+  line-height: 90px;
+  margin: 0 auto 20px;
+  font-size: 35px;
+  color: #F15D30;
+  transition: 0.4s;
+}
+
+.why-card:hover .icon-box {
+  background: #F15D30;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.why-card h3 {
+  margin-bottom: 15px;
+}
+
+.why-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Swiper spacing */
+.whySwiper {
+  padding-bottom: 50px;
+}
+
+      </style>
+
+    <!-- <section class="travel-tips">
       <div class="container">
         <h2 class="section-title">Essential Kerala Travel Tips</h2>
         <p class="section-subtitle">
@@ -666,8 +840,9 @@
 
         </div>
       </div>
-    </section>
-    <style>
+    </section> -->
+
+    <!-- <style>
     .travel-tips {
       padding: 80px 0;
       background: #f9f9f9;
@@ -742,7 +917,148 @@
         grid-template-columns: 1fr;
       }
     }
-  </style>
+  </style> -->
+
+    <section class="travel-tips">
+      <div class="container">
+        <h2 class="section-title">Essential Kerala Travel Tips</h2>
+        <p class="section-subtitle">
+          Plan smart and enjoy a safe, comfortable, and unforgettable journey.
+        </p>
+
+        <div class="swiper tipsSwiper">
+          <div class="swiper-wrapper">
+
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fa-solid fa-suitcase-rolling"></i>
+                </div>
+                <h3>Pack Smart</h3>
+                <p>Light cotton clothes and sunscreen are perfect for Kerala’s
+                  tropical weather.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fa-solid fa-cloud-sun"></i>
+                </div>
+                <h3>Best Time</h3>
+                <p>October to March offers the most pleasant climate for
+                  sightseeing.</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fa-solid fa-hotel"></i>
+                </div>
+                <h3>Book Early</h3>
+                <p>Reserve hotels and houseboats in advance during peak
+                  season.</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="swiper-slide">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fa-solid fa-hands-praying"></i>
+                </div>
+                <h3>Culture</h3>
+                <p>Dress modestly at temples and follow local traditions.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #F15D30;
+  display: block;
+  margin: 10px auto;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 60px;
+}
+
+/* Card Modern Style */
+.tip-card {
+  background: #ffffff;
+  padding: 45px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.tip-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(241, 93, 48, 0.15);
+}
+
+/* Modern Icon Circle */
+.tip-icon {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background: rgba(241, 93, 48, 0.1);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  font-size: 30px;
+  color: #F15D30;
+  transition: 0.4s ease;
+}
+
+.tip-card:hover .tip-icon {
+  background: #F15D30;
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.tip-card h3 {
+  margin-bottom: 15px;
+}
+
+.tip-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Equal height */
+.tipsSwiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.tipsSwiper .swiper-slide {
+  display: flex;
+}
+      </style>
 
     <section class="ftco-section testimony-section bg-bottom"
       style="background-image: url(images/bg_1.jpg);">
@@ -1122,6 +1438,71 @@
         });
       });
   </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      576: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3
+      }
+    }
+  });
+</script>
+    <script>
+  var swiper = new Swiper(".whySwiper", {
+    loop: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".whySwiper .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3
+      }
+    }
+  });
+</script>
+    <script>
+  var swiper = new Swiper(".tipsSwiper", {
+    loop: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".tipsSwiper .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      576: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 4
+      }
+    }
+  });
+</script>
   </body>
 
 </html>
